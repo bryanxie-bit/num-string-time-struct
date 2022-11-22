@@ -11,7 +11,7 @@ func Int64ToStr(i int64) string {
 
 //float64转字符串
 
-func Float64ToString(flo float64)(string){
+func Float64ToString(flo float64) string {
 	return strconv.FormatFloat(flo, 'f', -1, 64)
 }
 
@@ -19,5 +19,12 @@ func Float64ToString(flo float64)(string){
 
 func IntToString(i int) string{
 	return strconv.Itoa(i)
+}
+
+//unit32转string
+
+func Unit32ToString(i uint32) string {
+	s := strconv.FormatUint(uint64(i),10)
+	return s
 }
 
